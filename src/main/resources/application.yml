@@ -5,7 +5,7 @@ spring:
         - id: filmModule
           uri: https://filmservice-production-36c0.up.railway.app/
           predicates:
-            - Path=/films/**, /schedules/**
+            - Path=/films/**
         - id: userModule
           uri: https://user-service-production-dafa.up.railway.app/
           predicates:

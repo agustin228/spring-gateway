@@ -12,8 +12,6 @@ public class SpringBootCloudConfig {
         return builder.routes()
                 .route(r -> r.path("/films/**")
                         .uri("https://filmservice-production-36c0.up.railway.app/"))
-                .route(r -> r.path("/schedules/**")
-                        .uri("https://filmservice-production-36c0.up.railway.app/"))
                 .route(r -> r.path("/users_movies/**")
                         .uri("https://user-service-production-dafa.up.railway.app/"))
                 .route(r -> r.path("/api/auth/**")

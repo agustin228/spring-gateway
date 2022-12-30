@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: filmModule
+          uri: https://filmservice-production-36c0.up.railway.app/
+          predicates:
+            - Path=/films/**, /schedules/**
+        - id: userModule
+          uri: https://user-service-production-dafa.up.railway.app/
+          predicates:
+            - Path=/users_movies/**, /api/auth/**
+        - id: seatModule
+          uri: https://seat-service-production-2489.up.railway.app/
+          predicates:
+            - Path=/seats/**
+        - id: invoiceModule
+          uri: https://invoice-service-production-1064.up.railway.app/
+          predicates:
+            - Path=/invoice/**
+        - id: kafkaModule
+          uri: https://kafka-production.up.railway.app/
+          predicates:
+            - Path=/kafka/**
